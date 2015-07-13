@@ -1,0 +1,7 @@
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
+[user]
+	name = Bret Mogilefsky
+	email = bmogilefsky@gmail.com
