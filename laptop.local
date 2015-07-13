@@ -1,0 +1,37 @@
+#!/bin/sh
+
+# This is a supplementary set of stuff I want installed any time I'm setting up a new mac for development using the https://github.com/18F/laptop provisioner
+# Expect this might be handled by https://github.com/msanders/cider to be 18F-independent in future.
+
+# brew_cask_install 'firefox'
+brew_cask_install 'atom'
+brew_cask_install 'iterm2'
+brew_cask_install 'aquamacs'
+brew_cask_install 'sourcetree'
+brew_cask_install 'virtualbox'
+brew_cask_install 'kitematic'
+brew_cask_install 'divvy'
+brew_cask_install 'expandrive'
+brew_cask_install 'diskinventoryx'
+brew_cask_install 'java'
+brew_cask_install 'xmind'
+
+brew_install_or_upgrade 'mosh'
+brew_install_or_upgrade 'vim'
+brew_install_or_upgrade 'ctags'
+brew_install_or_upgrade 'tmux'
+brew_install_or_upgrade 'reattach-to-user-namespace'
+brew_install_or_upgrade 'android-sdk'
+brew_install_or_upgrade 'android-ndk'
+
+# Is it a home machine? Install these too...
+brew_cask_install 'crashplan'
+brew_cask_install 'android-file-transfer'
+brew_cask_install 'calibre'
+brew_cask_install 'vlc'
+brew_cask_install 'kindle'
+brew_cask_install 'transmission'
+brew_cask_install 'handbrake'
+brew_cask_install 'xmind'
+brew_cask_install 'lastpass'
+
