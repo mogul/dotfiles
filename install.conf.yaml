@@ -1,9 +1,0 @@
-- clean: ['~']
-
-- link:
-    ~/.gitconfig: gitconfig
-    ~/.laptop.local: laptop.local
-
-
-
-
