@@ -1,0 +1,62 @@
+# Testing/iteration reset: Use this file with "brew bundle cleanup --file=Brewfile.cleaner"
+# to reset the state of the machine and test installing homebrew packages.
+
+
+# Some taps
+tap 'gapple/services'
+tap 'pivotal/tap'
+
+# Some formulae - 18F list
+brew 'git'
+brew 'the_silver_searcher'
+brew 'postgresql'
+brew 'mysql'
+brew 'redis'
+brew 'imagemagick'
+brew 'qt'
+brew 'hub'
+brew 'node'
+brew 'python3'
+brew 'cloudfoundry-cli'
+brew 'sqlite'
+brew 'tmux'
+brew 'reattach-to-user-namespace'
+
+# Some casks - 18F list
+tap 'caskroom/versions'
+brew 'caskroom/cask/brew-cask'
+
+cask 'cloud'
+cask 'flux'
+cask 'github'
+cask 'slack'
+cask 'sublime-text3'
+
+# Ensure we can handle encrypted ssh/gpg keys
+brew 'git-crypt'
+brew 'gnupg'
+
+# Some personal formulae
+brew 'android-ndk'
+brew 'android-sdk'
+brew 'gnupg'
+brew 'mobile-shell'
+brew 'vim'
+brew 'sqlite'
+
+# Some personal casks
+cask 'android-file-transfer'
+cask 'aquamacs'
+cask 'atom'
+cask 'chicken'
+cask 'divvy'
+cask 'expandrive'
+cask 'handbrake'
+cask 'iterm2'
+cask 'java'
+cask 'kindle'
+cask 'lastpass'
+cask 'virtualbox'
+cask 'vlc'
+cask 'xmind'
+
