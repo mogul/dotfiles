@@ -12,8 +12,8 @@ else
 fi
 
 # Make sure everything's up to date
-echo "Updating brew formulae... (commented out temporarily for iteration speed)"
-# brew update
+echo "Updating brew formulae..."
+brew update
 
 # Make sure homebrew bundle command is tapped and available
 brew tap Homebrew/bundle
