@@ -9,18 +9,27 @@ brew 'sqlite'
 brew 'tree'
 
 # Some personal casks
+cask 'alfred'
 cask 'android-file-transfer'
 cask 'aquamacs'
 cask 'atom'
+cask 'balsamiq-mockups'
 cask 'chicken'
-cask 'divvy'
+cask 'evernote'
 cask 'expandrive'
 cask 'handbrake'
 cask 'iterm2'
 cask 'java'
 cask 'kindle'
 cask 'lastpass'
+cask 'sourcetree'
 cask 'virtualbox'
 cask 'vlc'
 cask 'xmind'
+
+# Window management utilities. (Still trying to decide what I like. Only Spectacle is free.)
+# cask 'divvy'
+# cask 'spectacle'
+cask 'moom'
+
 
