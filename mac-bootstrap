@@ -1,6 +1,12 @@
 #!/bin/bash
 
-# Install expected packages on Mac - Selections heavily influenced by 18F/laptop's "mac" script
+# Install expected packages on Mac and configure preferences/services
+
+# TODO: Provide a top-level invocation script to clone the repository that this script is in and then run this script
+# TODO: Suppress warning/error output
+# TODO: Improve progress output from bundle (-v should do it)
+# TODO: Provide a dry-run option
+
 
 # Make sure homebrew is installed
 if ! command -v brew >/dev/null; then
@@ -19,47 +25,20 @@ brew update
 brew tap Homebrew/bundle
 
 # Get all of our taps, formulae, and casks installed
-brew bundle --file=/dev/stdin << BrewfileEOF
 
-# Some taps
-tap 'gapple/services'
-tap 'pivotal/tap'
+# Make sure we can handle casks
+brew tap 'caskroom/versions'
+brew install 'caskroom/cask/brew-cask'
 
-# Some formulae - 18F list
-brew 'cloudfoundry-cli'
-brew 'git'
-brew 'hub'
-brew 'imagemagick'
-brew 'mysql'
-brew 'node'
-brew 'postgresql'
-brew 'python3'
-brew 'qt'
-brew 'reattach-to-user-namespace'
-brew 'redis'
-brew 'sqlite'
-brew 'the_silver_searcher'
-brew 'tmux'
+for BREWFILE in `find ./bootstrap -name \*.Brewfile`
+do
+	[ -f "$BREWFILE" ] && echo "Bundling $BREWFILE..." && brew bundle -v --file="$BREWFILE"
+	# TODO: Look for a corresponding foo.sh to run after each foo.Brewfile
+done
 
-# Some casks - 18F list
-tap 'caskroom/versions'
-brew 'caskroom/cask/brew-cask'
+## TODO: Move commented post-processing steps below into appropriate bootstrap/foo.sh files!
 
-cask 'cloud'
-cask 'flux'
-cask 'github'
-cask 'slack'
-cask 'sublime-text3'
-
-# Ensure we can decrypt encrypted ssh/gpg keys committed in our dotfile repo
-brew 'git-crypt'
-brew 'gnupg'
-
-BrewfileEOF
-
-# Do some post-processing
-
-#
+# 18F post-processing
 # Start up services often needed by developers
 # Really this should be handled via Docker and Kitematic in order to handle versioning
 # in dev the same way it's handled in qa/stg/prod
@@ -76,19 +55,23 @@ BrewfileEOF
 # echo 'Restarting redis...'
 # brew services restart redis
 
-# There's more setup to do around rvm, etc. per the 18F script
+# There's more setup to do around rvm, etc. per the 18F/laptop script
 # TODO
 
 # get git-crypt setup so that ssh/gpg keys are decrypted
 # TODO
 
-# If there's a local brewfile, include that too
-if [ -f "$HOME/.dotfiles/Brewfile" ]; then
-  brew bundle --file="$HOME/.dotfiles/Brewfile"
-fi
+# Install Oh My Zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 # Get github access set up
 if [ ! -f "$HOME/.ssh/github_rsa.pub" ]; then
-  open ~/Applications/GitHub.app
+
+ 	open ~/Applications/GitHub.app
 fi
 
+# Notes on stuff to break out/automate later
+#
+# I like setting the "Solarized Darcula with Background Image" iTerm2 theme; how do I capture/restore my terminal prefs?
+# Install the "agnoster" Zsh theme, along with the "Inconsolata" Powerline font
+# export DEFAULT_USER=$USER somewhere to hide redundant prompt info
