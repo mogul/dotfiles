@@ -70,8 +70,3 @@ if [ ! -f "$HOME/.ssh/github_rsa.pub" ]; then
  	open ~/Applications/GitHub.app
 fi
 
-# Notes on stuff to break out/automate later
-#
-# I like setting the "Solarized Darcula with Background Image" iTerm2 theme; how do I capture/restore my terminal prefs?
-# Install the "agnoster" Zsh theme, along with the "Inconsolata" Powerline font
-# export DEFAULT_USER=$USER somewhere to hide redundant prompt info
