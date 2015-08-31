@@ -1,7 +1,6 @@
 
 # Use antigen to manage the rest of this mess; see https://github.com/zsh-users/antigen
-# TODO: Use a git submodule to include the antigen repository directly in my dotfiles repo
-source /usr/local/Cellar/antigen/1/share/antigen.zsh
+source $DOTFILES_DIR/modules/antigen/antigen.zsh
 
 # Load up the oh-my-zsh lib in case we invoke something that makes use of it
 antigen use oh-my-zsh
