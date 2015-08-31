@@ -30,13 +30,15 @@ brew tap Homebrew/bundle
 brew tap 'caskroom/versions'
 brew install 'caskroom/cask/brew-cask'
 
-for BREWFILE in `find ./bootstrap -name \*.Brewfile`
+for BREWFILE in `find ./mac -name \*.Brewfile`
 do
-	[ -f "$BREWFILE" ] && echo "Bundling $BREWFILE..." && brew bundle -v --file="$BREWFILE"
+	[ -f "$BREWFILE" ] && echo "Bundling $BREWFILE..." && brew bundle --file="$BREWFILE"
 	# TODO: Look for a corresponding foo.sh to run after each foo.Brewfile
 done
 
-## TODO: Move commented post-processing steps below into appropriate bootstrap/foo.sh files!
+echo Done brewing.
+
+## TODO: Move commented post-processing steps below into appropriate mac/foo.sh files!
 
 # 18F post-processing
 # Start up services often needed by developers
@@ -61,12 +63,8 @@ done
 # get git-crypt setup so that ssh/gpg keys are decrypted
 # TODO
 
-# Install Oh My Zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 # Get github access set up
 if [ ! -f "$HOME/.ssh/github_rsa.pub" ]; then
-
  	open ~/Applications/GitHub.app
 fi
 

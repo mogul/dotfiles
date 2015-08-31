@@ -20,7 +20,6 @@ cask 'alfred'
 cask 'android-file-transfer'
 cask 'aquamacs'
 cask 'atom'
-cask 'authy'
 cask 'balsamiq-mockups'
 cask 'chicken'
 cask 'evernote'
@@ -47,8 +46,7 @@ cask 'moom'
 # brew gem install jekyll
 
 # Some fonts with Powerline support
-tap caskroom/fonts
-cask 'font-hack'
-cask 'font-inconsolata-for-powerline'
+cask 'caskroom/fonts/font-hack'
+cask 'caskroom/fonts/font-inconsolata-for-powerline'
 
 
