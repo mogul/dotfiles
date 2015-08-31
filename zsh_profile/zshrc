@@ -1,3 +1,4 @@
+export DOTFILES_DIR=~/.dotfiles
 
 # Use antigen to manage the rest of this mess; see https://github.com/zsh-users/antigen
 source $DOTFILES_DIR/modules/antigen/antigen.zsh
@@ -19,18 +20,18 @@ antigen bundle rupa/z
 # OS-specific additions
 CURRENT_OS=`uname`
 if [[ $CURRENT_OS == 'Darwin' ]]; then
-    antigen bundle brew
-    antigen bundle brew-cask
-    antigen bundle gem
-    antigen bundle osx
+	antigen bundle brew
+	antigen bundle brew-cask
+	antigen bundle gem
+	antigen bundle osx
 elif [[ $CURRENT_OS == 'Linux' ]]; then
     # None so far...
 
     if [[ $DISTRO == 'CentOS' ]]; then
-        antigen bundle centos
+    	antigen bundle centos
     fi
 elif [[ $CURRENT_OS == 'Cygwin' ]]; then
-    antigen bundle cygwin
+	antigen bundle cygwin
 fi
 
 # That gorgeous prompt...!
@@ -44,4 +45,3 @@ alias zshconfig="subl ~/.zshrc"
 
 # Make sure "z" has no troubles
 touch ~/.z
-
