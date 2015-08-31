@@ -46,3 +46,9 @@ cask 'moom'
 # Ruby gems
 # brew gem install jekyll
 
+# Some fonts with Powerline support
+tap caskroom/fonts
+cask 'font-hack'
+cask 'font-inconsolata-for-powerline'
+
+
