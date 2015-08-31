@@ -1,0 +1,6 @@
+
+# Slurp in environment variables that are shared across all shells
+export DOTFILES_DIR=$HOME/.dotfiles
+emulate sh
+ 	. $DOTFILES_DIR/common/env.sh
+emulate zsh
