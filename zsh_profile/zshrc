@@ -1,0 +1,48 @@
+
+# Use antigen to manage the rest of this mess; see https://github.com/zsh-users/antigen
+# TODO: Use a git submodule to include the antigen repository directly in my dotfiles repo
+source /usr/local/Cellar/antigen/1/share/antigen.zsh
+
+# Load up the oh-my-zsh lib in case we invoke something that makes use of it
+antigen use oh-my-zsh
+
+# Various oh-my-zsh plugins
+antigen bundle docker
+antigen bundle extract
+antigen bundle git
+antigen bundle github
+
+# Other plugins
+antigen bundle zsh-users/zsh-syntax-highlighting 		# Syntax highlighting as-you-type in the shell
+antigen bundle zsh-users/zsh-history-substring-search 	# Up-arrow selects matching history
+antigen bundle rupa/z
+
+# OS-specific additions
+CURRENT_OS=`uname`
+if [[ $CURRENT_OS == 'Darwin' ]]; then
+    antigen bundle brew
+    antigen bundle brew-cask
+    antigen bundle gem
+    antigen bundle osx
+elif [[ $CURRENT_OS == 'Linux' ]]; then
+    # None so far...
+
+    if [[ $DISTRO == 'CentOS' ]]; then
+        antigen bundle centos
+    fi
+elif [[ $CURRENT_OS == 'Cygwin' ]]; then
+    antigen bundle cygwin
+fi
+
+# That gorgeous prompt...!
+antigen theme wesbos/Cobalt2-iterm cobalt2.zsh-theme
+
+# All done, let's go!
+antigen apply
+
+# Aliases
+alias zshconfig="subl ~/.zshrc"
+
+# Make sure "z" has no troubles
+touch ~/.z
+
