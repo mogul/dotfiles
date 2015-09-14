@@ -15,7 +15,8 @@ antigen bundle github
 # Other plugins
 antigen bundle zsh-users/zsh-syntax-highlighting 		# Syntax highlighting as-you-type in the shell
 antigen bundle zsh-users/zsh-history-substring-search 	# Up-arrow selects matching history
-antigen bundle rupa/z
+antigen bundle rupa/z 									# z instead of cd!
+antigen bundle StackExchange/blackbox					# Easily handle sensitive files in a git repo
 
 # OS-specific additions
 CURRENT_OS=`uname`
