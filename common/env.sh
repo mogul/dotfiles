@@ -10,3 +10,10 @@ export EDITOR="subl -w"
 # Hide redundant prompt info when it's just me!
 export DEFAULT_USER=$USER
 
+# Set up for working with Go
+mkdir -p $HOME/Go
+mkdir -p $HOME/Go/src/github.com/user
+export GOPATH=$HOME/Go
+export GOROOT=/usr/local/opt/go/libexec
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
