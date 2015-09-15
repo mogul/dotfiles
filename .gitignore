@@ -3,3 +3,6 @@
 /keyrings/live/secring.gpg
 
 gnupg/random_seed
+/ssh/github_rsa
+
+ssh/known_hosts
