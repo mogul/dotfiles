@@ -1,0 +1,30 @@
+{
+	"in_process_packages":
+	[
+	],
+	"installed_packages":
+	[
+		"AutoFileName",
+		"Color Highlighter",
+		"Emmet",
+		"Emmet Css Snippets",
+		"Fix Mac Path",
+		"GitGutter",
+		"JavaScriptNext - ES6 Syntax",
+		"MarkdownEditing",
+		"Package Control",
+		"QuickGotoAnything",
+		"Select Quoted",
+		"Sublime-CSS3",
+		"SublimeLinter",
+		"SublimeLinter-jshint",
+		"SublimeLinter-json",
+		"SublimeLinter-pyyaml",
+		"SublimeLinter-rubocop",
+		"Theme - Cobalt2"
+	],
+	"repositories":
+	[
+		"https://github.com/i-akhmadullin/Sublime-CSS3"
+	]
+}
