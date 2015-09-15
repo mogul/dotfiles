@@ -6,3 +6,4 @@ gnupg/random_seed
 /ssh/github_rsa
 
 ssh/known_hosts
+/ssh/id_dsa
