@@ -28,3 +28,6 @@ cask 'sublime-text3'
 
 # You need some subtle cues to get tired and go home/to sleep at the end of the day!
 cask 'flux'
+
+# TODO: Brew should be able to handle gems, but apparently it can't do it from a Brewfile... So this needs to move into a post-process step
+# brew gem install about_yml

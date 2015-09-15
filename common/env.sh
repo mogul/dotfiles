@@ -21,3 +21,7 @@ export PATH=$PATH:$GOROOT/bin
 # Get gpg-agent running
 eval $(gpg-agent --daemon)
 
+# Ensure node installs global packages under my account
+NPM_PACKAGES=/Users/bretmogilefsky/.npm-packages
+NODE_PATH="$NPM_PACKAGES/lib/node_modules:$NODE_PATH"
+PATH="$NPM_PACKAGES/bin:$PATH"
