@@ -5,6 +5,7 @@ brew 'android-ndk'
 brew 'android-sdk'
 brew 'brew-gem'
 brew 'gnupg'
+brew 'gpg-agent'
 brew 'go'
 brew 'hugo'
 brew 'mobile-shell'
@@ -34,7 +35,6 @@ cask 'lastpass'
 cask 'rescuetime'
 cask 'screenhero'
 cask 'toggldesktop'
-cask 'virtualbox'
 cask 'vlc'
 cask 'xmind'
 
@@ -44,10 +44,13 @@ cask 'xmind'
 cask 'moom'
 
 # Ruby gems
-# brew gem install jekyll
+# TODO: The following line works at the CLI, but apparently you can't invoke "brew gem" from a Brewfile
+# gem install jekyll
 
 # Some fonts with Powerline support
 cask 'caskroom/fonts/font-hack'
 cask 'caskroom/fonts/font-inconsolata-for-powerline'
 
-
+# Requires root. :(
+# cask 'virtualbox'
+# cask 'dockertoolbox' 
