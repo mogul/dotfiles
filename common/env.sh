@@ -17,3 +17,7 @@ export GOPATH=$HOME/Go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
+
+# Get gpg-agent running
+eval $(gpg-agent --daemon)
+
