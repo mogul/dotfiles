@@ -8,8 +8,8 @@ brew 'postgresql'
 brew 'redis'
 brew 'sqlite'
 
-tap 'pivotal/tap'
-brew 'cloudfoundry-cli'
+tap 'cloudfoundry/homebrew-tap'
+brew 'cf-cli'
 
 brew 'git'
 brew 'hub'
