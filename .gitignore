@@ -7,3 +7,7 @@ gnupg/random_seed
 
 ssh/known_hosts
 /ssh/id_dsa
+
+ssh/id_rsa
+
+ssh/id_rsa.pub
