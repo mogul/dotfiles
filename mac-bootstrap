@@ -38,6 +38,9 @@ done
 
 echo Done brewing.
 
+# Upgrade any other things the user might have installed with brew between runs of this script
+brew upgrade
+
 ## TODO: Move commented post-processing steps below into appropriate mac/foo.sh files!
 
 # 18F post-processing
