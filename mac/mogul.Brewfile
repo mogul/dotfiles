@@ -44,18 +44,18 @@ cask 'vlc'
 cask 'xmind'
 
 # Window management utilities. (Still trying to decide what I like. Only Spectacle is free.)
-# cask 'divvy'
-# cask 'spectacle'
-cask 'moom'
+## cask 'divvy'
+## cask 'spectacle'
+# cask 'moom'
 
 # Ruby gems
 # TODO: The following line works at the CLI, but apparently you can't invoke "brew gem" from a Brewfile
 # gem install jekyll
 
 # Some fonts with Powerline support
-cask 'caskroom/fonts/font-hack'
-cask 'caskroom/fonts/font-inconsolata-for-powerline'
+# cask 'caskroom/fonts/font-hack'
+# cask 'caskroom/fonts/font-inconsolata-for-powerline'
 
 # Requires root. :(
-# cask 'virtualbox'
-# cask 'dockertoolbox' 
+## cask 'virtualbox'
+## cask 'dockertoolbox' 
