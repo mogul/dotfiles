@@ -46,3 +46,5 @@ alias zshconfig="subl ~/.zshrc"
 
 # Make sure "z" has no troubles
 touch ~/.z
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

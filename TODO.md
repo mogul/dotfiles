@@ -13,4 +13,6 @@
   - `npm install -g jshint`
 - Figure out post-process for sym-linking ~/.dotfiles/path (eg ssh, gnupg, etc.) to their corresponding ~/.path
   - For sublime: `ln -s ~/.dotfiles/sublime/User/ ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/User`
+- Script in [installation of rvm](http://portertech.ca/2010/03/26/homebrew--rvm--awesome/)
+- 
   
