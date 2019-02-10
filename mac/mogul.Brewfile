@@ -1,9 +1,13 @@
+# Override built-ins when there's a newer version available
+tap homebrew/dupes
+
 # Some personal formulae favorites
 # HINT: "brew bundle dump" can help you make your own list based on an existing configuration
 
 brew 'android-ndk'
 brew 'android-sdk'
 brew 'brew-gem'
+brew 'duck'
 brew 'ffmpeg'
 brew 'gifsicle'
 brew 'gnupg'
