@@ -17,6 +17,7 @@ antigen bundle zsh-users/zsh-syntax-highlighting 		# Syntax highlighting as-you-
 antigen bundle zsh-users/zsh-history-substring-search 	# Up-arrow selects matching history
 antigen bundle rupa/z 									# z instead of cd!
 antigen bundle StackExchange/blackbox					# Easily handle sensitive files in a git repo
+antigen bundle frodenas/cf-zsh-autocomplete-plugin		# Auto-complete for cloud foundry
 
 # OS-specific additions
 CURRENT_OS=`uname`
@@ -48,3 +49,16 @@ alias zshconfig="subl ~/.zshrc"
 touch ~/.z
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+export NVM_DIR="/Users/bretmogilefsky/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+export PATH="$HOME/.bin:$PATH"
+
+eval "$(hub alias -s)"
+
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+
+export VIRTUALENVWRAPPER_VIRTUALENV=/usr/local/bin/virtualenv
+
+source /usr/local/bin/virtualenvwrapper.sh
